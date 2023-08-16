@@ -1,0 +1,7 @@
+{
+  "lang": "tr",
+  "discordToken": "Your Discord Bot Token",
+  "discordGuildId": "Your Discord Server ID",
+  "discordVoiceChannelId": "Your Discord Voice Channel ID",
+  "discordBotId": "Your Discord Bot ID"
+}
