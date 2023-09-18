@@ -8,6 +8,7 @@ const {
   NoSubscriberBehavior,
 } = require("@discordjs/voice");
 const play = require("play-dl");
+const consola = require("consola");
 
 const config = require("../config.json");
 const { t } = require("./lang-control-service.js");
@@ -390,6 +391,25 @@ const DiscordService = {
         }
         await DiscordService[commandName](interaction);
       }
+    }
+  },
+  deleteSlashCommands: async () => {
+    const rest = new REST({ version: "10" }).setToken(config.discordToken);
+
+    try {
+      consola.start("Tüm komutlar siliniyor...");
+      await rest.put(
+        Routes.applicationGuildCommands(
+          config.discordBotId,
+          config.discordGuildId
+        ),
+        {
+          body: [],
+        }
+      );
+      consola.success("Tüm komutlar başarıyla silindi.");
+    } catch (error) {
+      consola.error("Komut silme hatası:", error);
     }
   },
 };

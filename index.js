@@ -1,4 +1,5 @@
 const { Client, Events, GatewayIntentBits } = require("discord.js");
+const consola = require("consola");
 
 const config = require("./config.json");
 const DiscordService = require("./services/discord-service");
@@ -12,8 +13,9 @@ const client = new Client({
   ],
 });
 client.on("ready", async () => {
+  await DiscordService.deleteSlashCommands();
   await DiscordService.registerSlashCommands();
-  console.log("Bot is ready!");
+  consola.box("Bot is ready!");
 });
 
 client.on(Events.InteractionCreate, async (interaction) => {
