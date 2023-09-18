@@ -43,7 +43,7 @@ Botunuz artık Discord sunucunuza katılmış ve hazır durumda!
 
 ## Kullanım
 Botunuz, /play, /pause, /start, /list, /next, /remove, /repeat, /reset, /leave olmak üzere çeşitli slash komutlarını destekler.
-- /play <şarkı_adı veya_video_url>: Verilen şarkıyı çalma listesine ekler ve oynatmaya başlar.
+- /play <şarkı_adı veya video_url>: Verilen şarkıyı çalma listesine ekler ve oynatmaya başlar.
 - /pause: Mevcut şarkıyı duraklatır.
 - /start: Duraklatılan şarkıyı devam ettirir.
 - /list: Çalma listesini gösterir.
