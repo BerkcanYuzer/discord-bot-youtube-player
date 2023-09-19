@@ -24,5 +24,11 @@
   "resetErrorMessage": "The playlist is empty. Please add song first.",
   "resetMessage": "The playlist has been reset.",
   "leaveMessage": "I left the voice channel.",
-  "errorMessage": "I am not in a voice channel."
+  "errorMessage": "I am not in a voice channel.",
+  "slashDelete": "Slash commands deleted.",
+  "guidNotFound": "Guild not found.",
+  "botReady": "Bot is ready.",
+  "allCommandDelete": "All commands will be deleted...",
+  "allCommandDeleted": "All commands are deleted.",
+  "commandError": "Command deletion error:"
 }

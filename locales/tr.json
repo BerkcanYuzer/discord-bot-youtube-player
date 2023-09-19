@@ -24,5 +24,11 @@
   "resetErrorMessage": "Çalma listesi boş. Lütfen önce şarkıyı ekleyin.",
   "resetMessage": "Çalma listesi boş. Ses kanalından ayrılıyorum.",
   "leaveMessage": "Ses kanalından ayrıldım.",
-  "errorMessage": "Ses kanalında değilim."
+  "errorMessage": "Ses kanalında değilim.",
+  "slashDelete": "Slash commandları silindi.",
+  "guidNotFound": "Guild bulunamadı.",
+  "botReady": "Bot hazır.",
+  "allCommandDelete": "Tüm komutlar siliniyor...",
+  "allCommandDeleted": "Tüm komutlar başarıyla silindi.",
+  "commandError": "Komut silme hatası: "
 }

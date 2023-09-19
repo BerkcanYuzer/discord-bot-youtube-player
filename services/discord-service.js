@@ -397,7 +397,7 @@ const DiscordService = {
     const rest = new REST({ version: "10" }).setToken(config.discordToken);
 
     try {
-      consola.start("Tüm komutlar siliniyor...");
+      consola.start(t("allCommandDelete"));
       await rest.put(
         Routes.applicationGuildCommands(
           config.discordBotId,
@@ -407,7 +407,7 @@ const DiscordService = {
           body: [],
         }
       );
-      consola.success("Tüm komutlar başarıyla silindi.");
+      consola.success(t("allCommandDeleted"));
     } catch (error) {
       consola.error("Komut silme hatası:", error);
     }
