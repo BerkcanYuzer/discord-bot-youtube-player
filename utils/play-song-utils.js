@@ -25,8 +25,8 @@ async function playSong(song, connection, DiscordService) {
       DiscordService.playerList.shift();
 
       if (DiscordService.playerList.length > 0) {
-        const nextSong = playerList[0];
-        playSong(nextSong, connection, DiscordService.playerList);
+        const nextSong = DiscordService.playerList[0];
+        playSong(nextSong, connection, DiscordService);
       } else {
         connection.destroy();
       }

@@ -81,7 +81,7 @@ const DiscordService = {
       { body: commands }
     );
   },
-
+  playerList,
   isInVoiceChannel: (interaction) => {
     const voiceChannel = interaction.member?.voice?.channel;
     return !!voiceChannel;
@@ -142,7 +142,7 @@ const DiscordService = {
     playerList.push(playListPush);
 
     if (!connection._state.subscription) {
-      playSong(playerList[0], connection, playerList);
+      playSong(playerList[0], connection, DiscordService);
     }
 
     if (playerList.length === 1) {
@@ -255,7 +255,7 @@ const DiscordService = {
     }
 
     const nextSong = playerList[0];
-    playSong(nextSong, connection);
+    await playSong(nextSong, connection, DiscordService);
 
     await interaction.editReply({
       content: `${t("nextMessage")} ${nextSong.title}.`,
